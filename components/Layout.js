@@ -4,12 +4,13 @@ import React, { useContext } from 'react';
 import { Store } from '../utils/Store';
 
 export default function Layout({ title, children }) {
+    // eslint-disable-next-line no-unused-vars
     const {state, dispatch} = useContext(Store);
     const { cart } = state;
   return (
     <>
       <Head>
-        <title>{title ? title + ' - Amazona' : 'Amazona'}</title>
+        <title>{title ? title + ' - Ecommerce' : 'Ecommerce'}</title>
         <meta name="description" content="Ecommerce Website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
