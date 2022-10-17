@@ -12,13 +12,13 @@ function LoginScreen() {
 
     const router = useRouter();
     const { redirect } = router.query;
-  
+
     useEffect(() => {
-      if (session?.user) {
-        router.push(redirect || '/');
-      }
+        if (session?.user) {
+            router.push(redirect || '/');
+        }
     }, [router, session, redirect]);
-  
+
 
     const {
         handleSubmit,
@@ -28,16 +28,16 @@ function LoginScreen() {
 
     const submitHandler = async ({ email, password }) => {
         try {
-          const result = await signIn('credentials', {
-            redirect: false,
-            email,
-            password,
-          });
-          if (result.error) {
-            toast.error(result.error);
-          }
+            const result = await signIn('credentials', {
+                redirect: false,
+                email,
+                password,
+            });
+            if (result.error) {
+                toast.error(result.error);
+            }
         } catch (err) {
-          toast.error(getError(err));
+            toast.error(getError(err));
         }
     }
 
@@ -83,7 +83,7 @@ function LoginScreen() {
                 </div>
                 <div className='mb-4'>
                     Don&apos;t have an account? &nbsp;
-                    <Link href="register">Register</Link>
+                    <Link href={`/register?redirect=${redirect || '/'}`}>Register</Link>
                 </div>
             </form>
         </Layout>
