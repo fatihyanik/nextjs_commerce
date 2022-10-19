@@ -4,3 +4,4 @@ const getError = (err) =>
     : err.message;
 
 export { getError };
+
