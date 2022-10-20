@@ -10,7 +10,7 @@ function ProductItem({ product, addToCartHandler }) {
                     <img
                         src={product.image}
                         alt={product.name}
-                        className="rounded shadow object-cover h-64 w-full"
+                        className="rounded shadow object-cover h-76 w-full"
                     />
                 </a>
             </Link>

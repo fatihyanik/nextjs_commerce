@@ -71,7 +71,7 @@ function AdminDashboardScreen() {
     datasets: [
       {
         label: 'Sales',
-        backgroundColor: 'rgba(162, 222, 208, 1)',
+        backgroundColor: 'rgba(245, 39, 145, 0.09)',
         data: summary.salesData.map((x) => x.totalSales),
       },
     ],
